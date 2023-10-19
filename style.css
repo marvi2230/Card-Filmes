@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(169, 1, 236, 0.605), rgba(0, 0, 0, 0.725));
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .titulo {
+    color: #e509d6;
+    box-sizing: border-box;
+    display: flex;
+    position: absolute;
+    left: 40%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+.logo img {
+    width: 100px;
+
+}
+
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+    margin-right: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    border-bottom: 2px solid #e509d6;
+}
+
+.navbar .search-box {
+    position: absolute;
+    /* top: 50%; */
+    left: 87%;
+    transform: translate(-50%, 50%);
+    height: 40px;
+    padding: 10px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 0;
+
+
+}
+
+.navbar .search-box .search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    line-height: 40px;
+    transition: .2s;
+    width: 0;
+}
+
+.navbar .search-box .search-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navbar .search-box:hover>.search-txt {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.navbar .search-box:hover>.search-btn {
+    background: white;
+}
+
+.cards {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-between;
+    margin-top: 30px;
+
+}
+
+.card {
+    width: 280px;
+    height: 360px;
+    padding: 2rem 1rem;
+    background: #fff;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.5s ease-in-out;
+    margin-top: 70px;
+
+}
+
+.card:hover {
+    transform: translateY(20px);
+}
+
+.card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(213, 4, 255, 0.314), #fff);
+    z-index: 2;
+    opacity: 0;
+
+}
+
+.card:hover:before {
+    opacity: 1;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card .info {
+    position: relative;
+    z-index: 3;
+    color: #000;
+    opacity: 1;
+    transform: translateY(30px);
+    transition: 0.5s all;
+
+}
+
+.card:hover .info {
+    opacity: 1;
+    transform: translateY(0px);
+
+}
+
+.card .info h1 {
+    margin: 0;
+}
+
+.card .info p {
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+.card .info .btn {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: #dd00f586;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    border-radius: 25px;
+}
+
+.card .info .btn:hover {
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homem-Aranha através do aranhaverso.</title>
+    <link rel="stylesheet" type="text/css" href="imagens-card1/style.css">
+    <link rel="shortcut icon" href="imagens-card1/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <a href="logo"><img src="imagens-card1/logo.png"></a>
+        <div class="toggle"><img src="Imagens-cards/toggle.png"></div>
+    </header>
+    <div class="banner">
+        <div class="content">
+            <h2><span> Aranhaverso </span> </h2>
+            <p>Miles Morales está de volta para o próximo capítulo da saga vencedora do Oscar®. Depois de se reunir com
+                Gwen Stacy, o amigão da vizinhança e protetor em tempo integral do Brooklyn é catapultado através do
+                Multiverso, onde ele encontra um time de Pessoas-Aranha que precisam proteger a própria existência.
+                Quando os heróis não conseguem se unir para lidar com uma nova ameaça, Miles se vê dividido e precisa
+                redefinir o que significa ser um herói para que ele consiga salvar as pessoas que mais ama.</p>
+            <a href="#" class="play" onclick="toggle();"><img src="Imagens-cards/play.png">Trailer</a>
+            <div class="slide"></div>
+            <ul class="sci">
+
+                <li><a href="file:///C:/Users/Usu%C3%A1rio/OneDrive/%C3%81rea%20de%20Trabalho/prototipo/index.html"><img
+                            src="Imagens-cards/voltar.jpg"></a></li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="trailer">
+        <video src="imagens-card1/Homem-Aranha_ Através do Aranhaverso _ Trailer Oficial Dublado.mp4"
+            controls="true"></video>
+        <img src="Imagens-cards/close.png" class="close" onclick="toggle();">
+    </div>
+    <script type="text/javascript">
+        function toggle() {
+            var trailer = document.querySelector('.trailer');
+            var video = document.querySelector('video');
+            trailer.classList.toggle('active');
+            video.currentTime = 0;
+            video.pause();
+
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joker</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="Logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <a href="logo"><img src="Imagens-cards/logo.png"></a>
+        <div class="toggle"><img src="Imagens-cards/toggle.png"></div>
+    </header>
+    <div class="banner">
+        <div class="content">
+            <h2>Coloque um <span> Sorriso </span> no rosto</h2>
+            <p>"Coringa" segue a história de Arthur Fleck, um comediante fracassado em Gotham City. Ele enfrenta
+                desafios pessoais, incluindo uma relação complicada com sua mãe e uma suposta ligação com Thomas Wayne.
+                À medida que Arthur mergulha na insanidade, torna-se o Coringa, um ícone de rebelião contra a sociedade.
+                O filme aborda questões sociais e violência, com destaque para a atuação de Joaquin Phoenix. Robert De
+                Niro interpreta um apresentador de TV influente na jornada de Arthur.</p>
+            <a href="#" class="play" onclick="toggle();"><img src="Imagens-cards/play.png">Trailer</a>
+            <div class="slide"></div>
+            <ul class="sci">
+
+                <li><a href="file:///C:/Users/Usu%C3%A1rio/OneDrive/%C3%81rea%20de%20Trabalho/prototipo/index.html"><img
+                            src="Imagens-cards/voltar.jpg"></a></li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="trailer">
+        <video src="Imagens-cards/Trailer-Coringa.mp4" controls="true"></video>
+        <img src="Imagens-cards/close.png" class="close" onclick="toggle();">
+    </div>
+    <script type="text/javascript">
+        function toggle() {
+            var trailer = document.querySelector('.trailer');
+            var video = document.querySelector('video');
+            trailer.classList.toggle('active');
+            video.currentTime = 0;
+            video.pause();
+
+        }
+    </script>
+
+</body>
+
+</html>
