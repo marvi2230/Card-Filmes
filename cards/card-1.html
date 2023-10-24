@@ -27,11 +27,74 @@
             <ul class="sci">
 
                 <li><a href="file:///C:/Users/Usu%C3%A1rio/OneDrive/%C3%81rea%20de%20Trabalho/prototipo/index.html"><img
-                            src="Imagens-cards/voltar.jpg"></a></li>
+                            src="Imagens-cards/voltar.png"></a></li>
             </ul>
 
         </div>
+        <div class="estrelas">
+            <ul class="avaliacao">
+                <li class="star-icon ativo" data-avaliacao="1"></li>
+                <li class="star-icon" data-avaliacao="2"></li>
+                <li class="star-icon" data-avaliacao="3"></li>
+                <li class="star-icon" data-avaliacao="4"></li>
+                <li class="star-icon" data-avaliacao="5"></li>
+            </ul>
+        </div>
+        <div class="classificacao"><img src="Indicação/livre.png"></div>
+        <div class="elenco">
+            <h1>elenco</h1>
+
+
+            <ol type="1">
+
+                <li>Joaquin Phoenix (Arthur Fleck / Coringa)</li>
+                <li>Robert De Niro (Murray Franklin)</li>
+                <li>Zazie Beetz (Sophie Dumond)</li>
+                <li>Frances Conroy (Penny Fleck)</li>
+                <li>Brett Cullen como Thomas Wayne</li>
+                <li>Shea Whigham como Detetive Burke</li>
+                <li>Bill Camp como Detetive Garrity</li>
+                <li>Glenn Fleshler como Randall</li>
+                <li>Leigh Gill como Gary</li>
+                <li>Josh Pais como Hoyt Vaughn</li>
+                <li>Marc Maron como Ted Marco</li>
+                <li>Brian Tyree Henry como Carl</li>
+                <li>Bryan Callen como Supergordinho</li>
+                <li>Douglas Hodge como Alfred Pennyworth</li>
+                <li>Dante Pereira-Olson como Bruce Wayne (jovem)</li>
+                <li>Sharon Washington como Assistente Social</li>
+
+            </ol>
+        </div>
     </div>
+    <div class="seu-slider">
+        <div class="suas-fotos">
+            <input type="radio" name="slider" id="img1" checked>
+            <input type="radio" name="slider" id="img2">
+            <input type="radio" name="slider" id="img3">
+            <input type="radio" name="slider" id="img4">
+
+            <div class="sua-slide m1">
+                <img src="imagens-card1/silede-1.jpg" alt="img1">
+            </div>
+            <div class="sua-slide m2">
+                <img src="imagens-card1/silede-2.jpg" alt="img2">
+            </div>
+            <div class="sua-slide m3">
+                <img src="imagens-card1/silede-3.jpg" alt="img3">
+            </div>
+            <div class="sua-slide m4">
+                <img src="imagens-card1/silede-4.jpg" alt="img4">
+            </div>
+        </div>
+        <div class="suas-dots">
+            <label for="img1"></label>
+            <label for="img2"></label>
+            <label for="img3"></label>
+            <label for="img4"></label>
+        </div>
+    </div>
+
     <div class="trailer">
         <video src="imagens-card1/Homem-Aranha_ Através do Aranhaverso _ Trailer Oficial Dublado.mp4"
             controls="true"></video>
@@ -46,6 +109,31 @@
             video.pause();
 
         }
+    </script>
+    <script>
+        var stars = document.querySelectorAll('.star-icon');
+        document.addEventListener('click', function (e) {
+            var classStar = e.target.classList;
+            if (!classStar.contains('ativo')) {
+                stars.forEach(function (star) {
+                    star.classList.remove('ativo');
+                });
+                classStar.add('ativo');
+                console.log(e.target.getAttribute('data-avaliacao'))
+            }
+        });
+    </script>
+    <script>
+        const radios = document.querySelectorAll('input[type=radio][name=slider]');
+        let currentIndex = 0;
+
+        function changeSlide() {
+            radios[currentIndex].checked = false;
+            currentIndex = (currentIndex + 1) % radios.length;
+            radios[currentIndex].checked = true;
+        }
+
+        setInterval(changeSlide, 3000); // Mude de imagem a cada 3 segundos (5000ms).
     </script>
 
 </body>

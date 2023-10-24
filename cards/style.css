@@ -7,6 +7,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    background-color: #000000;
+}
+
 header {
     position: absolute;
     top: 0;
@@ -76,6 +80,54 @@ header .toggle img {
     color: #fff;
     margin: 15px 0 35px;
 
+}
+
+
+
+
+
+
+.banner .elenco {
+    max-width: 500px;
+    margin-left: 50px;
+    margin-top: -200px;
+    bottom: -600px;
+
+    position: absolute;
+    align-items: center;
+
+
+}
+
+
+/*.banner .elenco ol {
+
+    margin: 0;
+    padding: 0;
+}*/
+
+
+.banner .elenco h1 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2.5em;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+
+
+}
+
+.banner .elenco li {
+    font-size: 1.2em;
+    font-weight: 200;
+    letter-spacing: 0.02em;
+    line-height: 1.5em;
+    color: #ffffff;
+    margin: 1px 0 1px;
+
+}
+.classificacao {
+    
 }
 
 .play {

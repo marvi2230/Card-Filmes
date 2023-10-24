@@ -7,6 +7,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    background-color: black;
+}
+
 header {
     position: absolute;
     top: 0;
@@ -78,6 +82,177 @@ header .toggle img {
 
 }
 
+.estrelas .avaliacao {
+
+    position: absolute;
+    bottom: 50px;
+    left: calc(50% - 250px /2);
+    width: 250px;
+    height: 150px;
+
+
+}
+
+.star-icon {
+    list-style-type: none;
+    border: 0px solid #fff;
+    cursor: pointer;
+    color: #FFE500;
+    width: 30px;
+    /* Defina o tamanho das estrelas */
+    height: 30px;
+    /* Defina o tamanho das estrelas */
+    font-size: 24px;
+}
+
+.star-icon::before {
+    content: "\2605";
+    /*cheio*/
+}
+
+.star-icon.ativo~.star-icon::before {
+    content: "\2606";
+    /*vazio*/
+}
+
+.avaliacao:hover .star-icon::before {
+    content: "\2605";
+    /*cheio*/
+}
+
+.star-icon:hover~.star-icon::before {
+    content: "\2606";
+    /*vazio*/
+
+}
+
+.banner .elenco {
+    max-width: 500px;
+    margin-left: 50px;
+    margin-top: -200px;
+    bottom: -600px;
+
+    position: absolute;
+    align-items: center;
+
+
+}
+
+
+/*.banner .elenco ol {
+
+    margin: 0;
+    padding: 0;
+}*/
+
+
+.banner .elenco h1 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2.5em;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+
+
+}
+
+.banner .elenco li {
+    font-size: 1.2em;
+    font-weight: 200;
+    letter-spacing: 0.02em;
+    line-height: 1.5em;
+    color: #ffffff;
+    margin: 1px 0 1px;
+
+}
+
+.classificacao {
+    position: absolute;
+    bottom: 50px;
+    left: calc(50% + 250px /2);
+    width: 250px;
+    height: 50px;
+}
+
+.classificacao img {
+    margin-right: 10px;
+    max-width: 50px
+}
+
+/* Estilos para o carrossel */
+.seu-slider {
+    position: relative;
+    width: 70%;
+    overflow: hidden;
+    max-width: 100%;
+    margin-left: 700px;
+    margin-top: 200px;
+    /* bottom: -600px; */
+    /* position: absolute; */
+    /* align-items: center; */
+    height: 100vh;
+    /* display: flex; */
+    /* justify-content: center; */
+
+}
+
+.suas-fotos {
+    display: flex;
+    width: 150%;
+    /* A largura deve ser multiplicada pelo número de imagens */
+}
+
+.sua-slide {
+    width: 25%;
+    transition: transform 0.3s ease;
+}
+
+.suas-fotos img {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.suas-fotos input[type="radio"] {
+    display: none;
+}
+
+.suas-fotos input[type="radio"]:checked~.sua-slide {
+    transform: translateX(0);
+}
+
+.suas-fotos input[type="radio"]#img2:checked~.sua-slide {
+    transform: translateX(-100%);
+}
+
+.suas-fotos input[type="radio"]#img3:checked~.sua-slide {
+    transform: translateX(-200%);
+}
+
+.suas-fotos input[type="radio"]#img4:checked~.sua-slide {
+    transform: translateX(-300%);
+}
+
+.suas-dots {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+.suas-dots label {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: solid #fff 3px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin: 5px;
+}
+
+.suas-dots label:hover {
+    background-color: #fff;
+}
+
 .play {
     position: relative;
     display: inline-flex;
@@ -130,7 +305,7 @@ header .toggle img {
     left: calc(50% - 250px /2);
     width: 250px;
     height: 150px;
-    background: url(3.jpg);
+    background: url(aranha.jpg);
     background-size: cover;
     cursor: pointer;
     animation: animate 25s linear infinite;
